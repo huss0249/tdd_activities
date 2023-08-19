@@ -1,5 +1,8 @@
 const log = console.log;
-const $App = document.querySelector("#App1");
+const $App1 = document.querySelector("#App1");
+const $App2 = document.querySelector("#App2");
+const $App3 = document.querySelector("#App3");
+const $App4 = document.querySelector("#App4");
 
 let $fire = "";
 
@@ -129,7 +132,7 @@ const createQ = () => {
   });
   tmpArr.push("</div>");
   $tQ.innerHTML = tmpArr.join(" ");
-  $App.appendChild($tQ);
+  $App1.appendChild($tQ);
 };
 
 // ========================================================================================
@@ -172,13 +175,16 @@ const createSample = () => {
   const $down_btn = document.querySelector("#down");
   $down_btn.addEventListener("click", reuse.fireDown);
 
-  const $tGrid = document.querySelector(".t-grid");
+  // const $tGrid = document.querySelector(".t-grid");
+  let $tGrid = document.querySelector(".t-grid");
   $tGrid.addEventListener("click", reuse.selected);
+  return
 };
 // ========================================================================================
 
 // ========================================================================================
-const createApp = () => {
+// const createApp = () => {
+const createApp = (obj) => {
   // CREATE FIRE CONTAINER
   let $fireContainer = reuse.setObj(null, "div", "fire-cont", [
     "container",
@@ -198,12 +204,14 @@ const createApp = () => {
     "border-light"
     // "bg-dark"
   ]);
-  $App.appendChild($fireContainer);
+  // $App1.appendChild($fireContainer);
+  obj.appendChild($fireContainer);
   // $fireContainer.innerHTML = `<div class='fire m-auto p-5'></div>`;
   $fireContainer.innerHTML = `<div class='fire m-auto p-5'></div>`;
 
   // ASSIGN APP CLASSES
-  reuse.setClasses($App, [
+  // reuse.setClasses($App1, [
+  reuse.setClasses(obj, [
     // "container",
     "row",
     "d-flex",
@@ -223,8 +231,13 @@ const createApp = () => {
 
   createQ();
   createSample();
+  return
 };
 
-createApp();
+// createApp();
+createApp($App1);
+createApp($App2);
+createApp($App3);
+createApp($App4);
 
 // ========================================================================================
