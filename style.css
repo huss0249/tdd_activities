@@ -182,7 +182,7 @@ body {
   
   /*========================== */
   
-  body {
+  /* body { */
     /*   background-color: white;
     display: flex;
     flex-direction: column;
@@ -191,7 +191,7 @@ body {
     gap: 0.5rem;
     height: 100vh;
     margin: 0; */
-  }
+  /* } */
   
   .checkbox {
     display: flex;
