@@ -1,53 +1,7 @@
 const log = console.log;
-const $App = document.querySelector("#App");
+const $App = document.querySelector("#App1");
 
 let $fire = "";
-
-const instructions = [
-  "Select an element to remove it from the fire triangle.",
-  "instruction 2",
-  "instruction 3",
-  "instruction 4"
-];
-const feedback = [
-  "That’s right! Since all four of these elements must be present to create a fire, removing any one of these four elements will put out a fire.",
-  "feedback 2",
-  "feedback 3",
-  "feedback 4"
-];
-
-const labels = ["Heat", "Oxygen", "Fuel", "Chemical Chain Reaction"];
-
-// Question
-const qHead =
-  "<h2>TITLE</h2><p>Question content.</p><p><strong>Strong</strong> </p><p class='instructions'>INSTRUCTIONS.</p>";
-
-const choices = [
-  {
-    choice: "Heat",
-    value: 1,
-    correct: true,
-    order: 1
-  },
-  {
-    choice: "Oxygen",
-    value: 2,
-    correct: true,
-    order: 2
-  },
-  {
-    choice: "Chemical Chain Reaction",
-    value: 3,
-    correct: true,
-    order: 3
-  },
-  {
-    choice: "Fuel",
-    value: 4,
-    correct: true,
-    order: 4
-  }
-];
 
 let $Question = "";
 let attempts = 0; // attempts counter
