@@ -107,7 +107,7 @@ const activity_4_correctFeedbacks = [
 ]
 
 // Correct feedbacks
-const feedbacks = [
+const activities_feedbacks = [
   "That’s right! Since all four of these elements must be present to create a fire, removing any one of these four elements will put out a fire.",
   activity_2_correctFeedbacks,
   activity_3_correctFeedbacks,
