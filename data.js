@@ -71,6 +71,41 @@ const activity_3_correctFeedbacks = [
 ]
 
 
+const activity_4_head = "When using a fire extinguisher, it’s important to follow PASS to put the fire out quickly and to ensure it stays out."
+
+const activity_4_questions = [
+    "Question 1: You have encountered a small fire. You grab the fire extinguisher off the wall and twist the pin to break the seal, and you pull int out. Where do you aim the nozzle?",
+    "Question 2: You have decided correctly to aim the nozzle at the base of the fire, you squeeze the handle to initiate the spray. How do you sweep the nozzle to distribute the spray?"
+]
+
+const activity_4_instructions = [
+    "Select which area you would aim the fire extinguisher nozzle at.",
+    "Select which area you would aim the fire extinguisher nozzle at."
+]
+
+const activity_4_options = [
+                            [
+                                "Above the flames",
+                                "In the centre of the flames",
+                                "At the base of the flames."
+                            ],
+                            [
+                                "Sweep in a small side to side motion concentrated on the middle of the fire.",
+                                "Sweep wide from side to side",
+                                "Sweep up and down from the base of the fire to the top of the flames"                                   
+                            ]
+]
+
+const activity_4_answers = [
+    "At the base of the flames",
+    "Sweep wide from side to side"
+]
+
+const activity_4_correctFeedbacks = [
+    "That’s right! You should always aim the nozzle at the base of the flames.",
+    "That’s right! You must sweep in a wide side to side motion at the base of the fire."
+]
+
 // Correct feedbacks
 const feedbacks = [
   "That’s right! Since all four of these elements must be present to create a fire, removing any one of these four elements will put out a fire.",
@@ -245,5 +280,93 @@ This concludes the Portable Fire Extinguisher Training Quiz.
 <if passed> Congratulations, you scored 80% or higher. 
 You may proceed to the practical component of this training. For instructions on how to enroll for the practical component of the training at your location, open the Portable Fire Extinguisher Training – Practical Component document located on the DLN in the Activities section of this training.
 <if failed> You did not score 80% or higher. Please try again.
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+Audio/narration
+Video
+On screen elements (text/images)
+PASS is an acronym to help you remember the correct actions to take when using a portable fire extinguishers.
+Display text on screen one line at a time
+Pull 
+Aim 
+Squeeze 
+Sweep 
+
+
+Fade out all text except “Pull”.
+Pull 
+Aim 
+Squeeze 
+Sweep 
+Twist the locking pin to break the seal on the fire extinguisher and then pull the pin. This additional seal is on all fire extinguishers at DND. 
+Animated video: Close-up of a hand twisting and pulling out the pin on a standard fire extinguisher. Overlay arrows to highlight the twisting and pulling motions.
+
+
+
+
+Highlight “Aim”
+Pull 
+Aim 
+Squeeze 
+Sweep 
+Next, standing approximately 8 feet from the fire, aim the nozzle at the base of the flames. 
+Animated video: Wider shot showing the nozzle being aimed at the base of the fire. Include overlay of arrows/lines to highlight the aim/target area and distance from the flame.
+
+
+
+
+Aiming too high will waste the extinguishing agent and 
+Animated video: Wider shot showing the nozzle being aimed at the smoke/flames. Include overlay of arrows/lines to highlight the aim/target area.
+
+
+
+
+Highlight “Squeeze”
+Pull 
+Aim 
+Squeeze 
+Sweep 
+Squeeze the lever to release the agent.
+Animated video: Close-up of the lever being squeezed and the agent beginning to deploy.
+
+
+
+
+Highlight “Sweep”
+Pull 
+Aim 
+Squeeze 
+Sweep 
+Sweep the nozzle from side to side across the base of the fire.
+Animated video: Show the agent being dispersed in wide sweeps across the base of the fire.
+
+
+Ensure you sweep in wide strokes …, a narrow stroke could miss the flame interface. Flames may appear out but if the interface is still active, the fire could reignite.
+
+
+Add overlay of arrows/lines to highlight that the stroke width is wider than the flame base.
+
+
+After the fire appears to be out, watch it carefully in case it reignites.
+Video: Show extinguished fire.
+
+
+
+
+REMEMBER! If the fire is too big (above waist height or more than 2 meters wide) or spreading and threatening to block your escape route, leave the area immediately!
 
 */
