@@ -1,0 +1,242 @@
+body {
+    background: papayawhip;
+  }
+  .activity {
+    width: 1104px;
+    height: 600px;
+    overflow: hidden;
+  }
+  #fire-cont {
+    min-width: 20rem;
+    width: 20rem;
+    height: 20rem;
+  
+    max-width: 100%;
+    max-height: 100%;
+  
+    /*   border-radius: 50%; */
+    background: #123;
+  }
+  
+  .fire {
+    position: relative;
+    /*   margin: 0 auto; */
+    width: 50%;
+    height: 90%;
+    filter: blur(0.0625rem);
+  }
+  
+  .fire-fade {
+    animation: firefade 2s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+    /*   animation-delay: calc(1s * var(--rand)); */
+  }
+  
+  .flame {
+    background-image: radial-gradient(#ff5000 20%, rgba(255, 80, 0, 0) 70%);
+    background-image: linear-gradient(
+        to top right,
+        rgb(13 18 23 / 75%),
+        rgb(226 203 7 / 39%)
+      ),
+      radial-gradient(ellipse at 10% 100%, #ff7e00 10%, #7a0404 35%, #3a0808 65%);
+  
+    width: 50%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    z-index: var(--rand);
+    mix-blend-mode: color-dodge;
+    left: calc(50% * (var(--i) - 1) / 70);
+    animation: flameup 2s ease-in-out infinite;
+    animation-delay: calc(2s * var(--rand));
+  }
+  
+  @keyframes flameup {
+    from {
+      opacity: 0.5;
+      transform: translateY(0) scale(1.25);
+    }
+  
+    to {
+      opacity: 0;
+      transform: translateY(-150%) scale(0);
+    }
+  }
+  
+  @keyframes firefade {
+    from {
+      opacity: 0.75;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .fire-up {
+    animation: upfire 2s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes upfire {
+    from {
+      /*     scale: 1; */
+      transform: scale(1) translateY(0%);
+    }
+  
+    to {
+      /*     scale: 1.5; */
+      transform: scale(1.75) translateY(-25%);
+    }
+  }
+  
+  .fire-down {
+    animation: downfire 2s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes downfire {
+    from {
+      /*     scale: 1; */
+      transform: scale(1) translateY(0%);
+    }
+  
+    to {
+      /*     scale: 1.5; */
+      transform: scale(0.75) translateY(10%);
+    }
+  }
+  
+  /* ============================================================================ */
+  
+  /* TRIANGLE Grid setup */
+  .t-row > * {
+    display: grid;
+    place-items: center;
+  }
+  
+  /* Triangle setup */
+  .t-grid {
+    /*   min-width: 20rem; */
+    width: 25rem;
+  
+    /*  y=mx+b for points p1(160,36) p2(1920,256) */
+    --triangle-size: calc(12.5dvw + 1rem);
+  
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  
+  .t-row > :nth-child(odd) {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    /*   background-color: LemonChiffon; */
+  } /* up   */
+  .t-row > :nth-child(even) {
+    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+    /*   background-color: LightBlue; */
+  } /* Down */
+  
+  .t-row > * {
+    width: var(--triangle-size);
+    height: var(--triangle-size);
+    margin: 0 calc(-1 * var(--triangle-size) / 4);
+  }
+  
+  /* Action */
+  .t-row > :hover {
+    background-color: tomato !important;
+    cursor: pointer;
+  }
+  
+  button.tri:nth-child(1),
+  button.tri:nth-child(3) {
+    background: green;
+    padding-top: 4rem !important;
+  }
+  button.tri:nth-child(2) {
+    background: red;
+    padding-bottom: 5.5rem !important;
+    font-size: 0.95rem !important;
+  }
+  
+  /* ========================================================================= */
+  
+  .cnt {
+    /*   background: blue !important; */
+    text-align: center;
+    /*   top: 80px; */
+    /*   left: -47px; */
+    position: relative;
+    /*   padding: 20px; */
+    /*   width: 50px; */
+    /*   height: 50px; */
+    /*   margin: 0px; */
+    width: 70%;
+    height: 50%;
+  }
+  
+  /*========================== */
+  
+  body {
+    /*   background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 100vh;
+    margin: 0; */
+  }
+  
+  .checkbox {
+    display: flex;
+    justify-content: between;
+    align-items: center;
+  }
+  
+  .checkbox input[type="checkbox"] {
+    display: none;
+  }
+  
+  .checkbox input[type="checkbox"]:checked + .checkbox-container {
+    background-color: limegreen;
+  }
+  .checkbox input[type="checkbox"]:checked + .checkbox-container .mark {
+    right: 0;
+    left: calc(100% - 2.5rem);
+  }
+  .checkbox .checkbox-container {
+    overflow: hidden;
+    position: relative;
+    width: 4.5rem;
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    background-color: darkgray;
+    /*   transition: background-color 0.3s ease; */
+    transition: all 0.3s ease;
+    box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.4);
+  }
+  .checkbox .checkbox-container .mark {
+    position: absolute;
+    left: 0;
+    height: 2rem;
+    width: 2rem;
+    margin: 0.25rem;
+    border-radius: 2rem;
+    background-color: white;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  .checkbox .checkbox-container .mark:active {
+    width: 2rem;
+    height: 2rem;
+    margin: 0.25rem;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.4);
+  }
+  
