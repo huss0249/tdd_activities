@@ -5,6 +5,7 @@
     width: 1104px;
     height: 600px;
     overflow: hidden;
+    background: #123;
   }
   #fire-cont {
     min-width: 20rem;
@@ -24,6 +25,8 @@
     width: 50%;
     height: 90%;
     filter: blur(0.0625rem);
+
+
   }
   
   .fire-fade {
