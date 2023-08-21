@@ -1,3 +1,4 @@
 {
-    "autofold.default": 2
+    "autofold.default": 2,
+    "liveServer.settings.port": 5501
 }

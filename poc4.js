@@ -95,7 +95,7 @@ class FireContainer {
         this.app.appendChild(FireContainer.createContainer(this._i));
     }
 
-    fireUp() {
+    aa() {
         // $fire.classList.remove("fire-fade");
         // $fire.classList.add("fire-up");
         // log(e.target);
@@ -115,4 +115,4 @@ const s2 = new FireContainer(5, 6, 50, $App2).makeFire()
 const s3 = new FireContainer(5, 6, 40, $App3).makeFire()
 const s4 = new FireContainer(5, 6, 30, $App4).makeFire()
 
-// s1.fireUp()
+s1.aa()
