@@ -1,0 +1,117 @@
+body {
+    background: #123;
+}
+
+.activities {
+    /* background: papayawhip; */
+    background: #123;
+    width: 600px;
+}
+
+.activity {
+    width: 400px;
+    height: 200px;
+    /*   overflow: hidden; */
+    background: #fff;
+}
+
+.App,
+#App {
+    width: 200px;
+    height: 200px;
+}
+/* ----------------------------------------------------------------------------------------------- */
+
+.fire {
+    position: relative;
+    width: 50%;
+    height: 90%;
+    filter: blur(0.0625rem);
+}
+
+.flame {
+    background-image: radial-gradient(#ff5000 20%, rgba(255, 80, 0, 0) 70%);
+    background-image: linear-gradient(to top right,
+            rgb(13 18 23 / 75%),
+            rgb(226 203 7 / 39%)),
+        radial-gradient(ellipse at 10% 100%, #ff7e00 10%, #7a0404 35%, #3a0808 65%);
+
+    width: 50%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    z-index: var(--rand);
+    mix-blend-mode: color-dodge;
+    /*   left: calc(50% * (var(--i) - 1) / 70); */
+    left: calc(50% * (var(--i) - 1) / 100);
+    animation: flame 2s ease-in-out infinite;
+    animation-delay: calc(2s * var(--rand));
+}
+
+@keyframes flame {
+    from {
+        opacity: 0.5;
+        transform: translateY(0) scale(1.25);
+    }
+
+    to {
+        opacity: 0;
+        /*     transform: translateY(-150%) scale(0); */
+        transform: translateY(-300%) scale(0);
+    }
+}
+
+.fire-fade {
+    animation: fade 2s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+    /*   animation-delay: calc(1s * var(--rand)); */
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.75;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.fire-up {
+    animation: up 2s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+}
+
+@keyframes up {
+    from {
+        /*     scale: 1; */
+        transform: scale(1) translateY(0%);
+    }
+
+    to {
+        /*     scale: 1.5; */
+        transform: scale(1.75) translateY(-25%);
+    }
+}
+
+.fire-down {
+    animation: down 2s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+}
+
+@keyframes down {
+    from {
+        /*     scale: 1; */
+        transform: scale(1) translateY(0%);
+    }
+
+    to {
+        /*     scale: 1.5; */
+        transform: scale(0.75) translateY(10%);
+    }
+}

@@ -15,7 +15,8 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
 
-  <link rel="stylesheet" href="./style.css" />
+  <!-- <link rel="stylesheet" href="./style.css" /> -->
+  <link rel="stylesheet" href="./style_poc7.css" />
   <!-- <script src="./data.js" defer=""></script> -->
   <!-- <script src="./script.js" defer=""></script> -->
   <!-- <script src="./poc.js" defer=""></script> -->
@@ -26,38 +27,43 @@
   <script src="./poc6.js" defer=""></script>
 </head>
 
-<body class="bg-dark">
+<!-- <body class="bg-dark"> -->
+<body>
 
   <!-- ---------------------------------------------------------------------- -->
-  <div class="activities row d-flex flex-column justify-content-around p-5">
+  <div class="activities row d-flex flex-column justify-content-around gap-3">
     <!--  |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||  -->
-    <div class="container btn-group d-flex flex-row col-6 px-0 my-5 shadow">
-      <button id="down" class="btn btn-success">Down Fire</button>
-      <button id="stop" class="btn btn-warning">Stop Fire</button>
-      <button id="up" class="btn btn-danger">Up Fire</button>
-      <button id="reset" class="btn btn-info">RESET</button>
+    <div class='container btn-group flex-fill d-flex flex-row px-0 my-3 shadow'>
+      <button id='down' class='btn btn-success'>Down Fire</button>
+      <button id='stop' class='btn btn-warning'>Stop Fire</button>
+      <button id='up' class='btn btn-danger'>Up Fire</button>
+      <button id='reset' class='btn btn-info'>RESET</button>
     </div>
     <!--  |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||  -->
 
     <!-- ---------------------------------------------------------------------- -->
     <!-- ---------------------------------------------------------------------- -->
-    <div class="activity container rounded-3 shadow bg-light m-3 mx-auto p-5">
-      <div id="App1"></div>
+    <!-- <div class="activity container rounded-3 shadow bg-light m-3 mx-auto p-5"> -->
+    <div class="activity">
+      <div id="App1" class="App"></div>
     </div>
     <!-- ---------------------------------------------------------------------- -->
     <!-- ---------------------------------------------------------------------- -->
-    <div class="activity container rounded-3 shadow bg-light m-3 mx-auto p-5">
-      <div id="App2"></div>
-    </div>
-    <!-- ---------------------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------------------- -->
-    <div class="activity container rounded-3 shadow bg-light m-3 mx-auto p-5">
-      <div id="App3"></div>
-    </div>
-    <!-- ---------------------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------------------- -->
-    <div class="activity container rounded-3 shadow bg-light m-3 mx-auto p-5">
-      <div id="App4"></div>
+    <!-- <div class="activity container rounded-3 shadow bg-light m-3 mx-auto p-5"> -->
+      <div class="activity">
+        <div id="App2" class="App"></div>
+      </div>
+      <!-- ---------------------------------------------------------------------- -->
+      <!-- ---------------------------------------------------------------------- -->
+      <!-- <div class="activity container rounded-3 shadow bg-light m-3 mx-auto p-5"> -->
+      <div class="activity">
+        <div id="App3" class="App"></div>
+      </div>
+      <!-- ---------------------------------------------------------------------- -->
+      <!-- ---------------------------------------------------------------------- -->
+      <!-- <div class="activity container rounded-3 shadow bg-light m-3 mx-auto p-5"> -->
+      <div class="activity">
+      <div id="App4" class="App"></div>
     </div>
     <!-- ---------------------------------------------------------------------- -->
     <!-- ---------------------------------------------------------------------- -->
